@@ -16,7 +16,6 @@ app.get('/task2A', (req, res) => {
 
 app.get('/task2B', (req, res) => {
     const badName = 'Invalid fullname';
-    //const re = new RegExp('[A-ZА-ЯЁ][a-zа-яёó]');
 
     var nameFull = req.query.fullname;
     var nameFirst, nameOwn, nameLast;
@@ -41,10 +40,7 @@ app.get('/task2B', (req, res) => {
     if (nameFull.length==0) {
     	nameFull = badName;
     }
-
-
- //   nameFull = nameFirst + ' ' + nameOwn + ' ' + nameLast;
-	res.send(nameFull);
+    res.send(nameFull);
 });
 
 
