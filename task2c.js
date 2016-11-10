@@ -5,7 +5,7 @@ const app = express();
 app.use(cors());
 
 function canonize(name) {
-	const re = new RegExp('@?(https?:)?(\/\/)?(([a-zA-Z0-9.]*)[^\/]*\/)?([a-zA-Z0-9.]*)', 'i');
+	const re = new RegExp('@?(https?:)?(\/\/)?(([a-zA-Z0-9.]*)[^\/]*\/)?@?([a-zA-Z0-9_.]*)', 'i');
 	return '@'+name.match(re)[5];
 }
 
